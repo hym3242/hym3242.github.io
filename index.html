@@ -1,50 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Foundation 实例</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdn.staticfile.org/foundation/5.5.3/css/foundation.min.css">
-  <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-  <script src="https://cdn.staticfile.org/foundation/5.5.3/js/foundation.min.js"></script>
-  <script src="https://cdn.staticfile.org/foundation/5.5.3/js/vendor/modernizr.js"></script>
+<meta charset="utf-8"> 
+<title>菜鸟教程(runoob.com)</title> 
+<style>
+ul
+{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+}
+li
+{
+	float:left;
+}
+a
+{
+	display:block;
+	width:60px;
+	background-color:#dddddd;
+}
+</style>
 </head>
+
 <body>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#news">News</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#about">About</a></li>
+</ul>
 
-<nav class="top-bar" data-topbar>
-  <ul class="title-area">
-    <li class="name">
-      <!-- 如果你不需要标题或图标可以删掉它 -->
-      <h1><a href="#">WebSiteName</a></h1>
-    </li>
-      <!-- 小屏幕上折叠按钮: 去掉 .menu-icon 类，可以去除图标。 
-      如果需要只显示图片，可以删除 "Menu" 文本 -->
-    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-  </ul>
+<p><b>注意:</b> 如果 !DOCTYPE 没有定义, floating 可以产生意想不到的结果.</p>
 
-  <section class="top-bar-section">
-    <ul class="left">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Page 1</a></li>
-      <li><a href="#">Page 2</a></li>
-      <li><a href="#">Page 3</a></li> 
-    </ul>
-  </section>
-</nav>
+<p>背景颜色添加到链接中显示链接的区域。整个链接区域是可点击的,不仅仅是文本。</p>
 
-<div style="padding:20px;">
-  <h3>基本头部工具条实例</h3>
-  <p>工具条是在页面头部的导航。</p>
-  <p><strong>注意:</strong> 在小屏幕上工具条会被一个按钮取代 (重置窗口，查看效果)。</p>
-  <p>在按钮被点击后导航项将显示。</p>
-</div>
-
-<!-- 初始化 Foundation JS -->
-<script>
-$(document).ready(function() {
-    $(document).foundation();
-})
-</script>
+<p><b>注意:</b> overflow:hidden 添加到 ul 元素,以防止 li 元素列表的外出。.</p>
 
 </body>
 </html>
