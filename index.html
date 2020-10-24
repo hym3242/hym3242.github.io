@@ -1,42 +1,96 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8"> 
-<title>菜鸟教程(runoob.com)</title> 
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
 <style>
-ul
-{
-	list-style-type:none;
-	margin:0;
-	padding:0;
-	overflow:hidden;
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
 }
-li
-{
-	float:left;
+
+li {
+    float: left;
 }
-a
-{
-	display:block;
-	width:60px;
-	background-color:#dddddd;
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 500px;/* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
 </style>
 </head>
-
 <body>
+
 <ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#news">News</a></li>
-<li><a href="#contact">Contact</a></li>
-<li><a href="#about">About</a></li>
+  <li><a class="active" href="index.html">Majoring+</a></li>
+  <li><a href="#home">浏览</a></li>
+  <li><a href="#news">新闻</a></li>
+  <li><a href="#contact">联系</a></li>
+  <li style="float:right"><a href="#login">登录</a></li>
+  <li style="float:right"><a href="#about">注册</a></li>
 </ul>
 
-<p><b>注意:</b> 如果 !DOCTYPE 没有定义, floating 可以产生意想不到的结果.</p>
+<!-- -->
 
-<p>背景颜色添加到链接中显示链接的区域。整个链接区域是可点击的,不仅仅是文本。</p>
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <img src="kcb.jpg" width="130" height="100"></img>
+	<h2>课程表</h2>
+    <p>你还在为蹭课不知道这堂课的课程表而发愁吗？上传你的课程表，即可访问所有人分享的课程表！一起快乐蹭课吧！</p>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <img src="magnifier.png" width="100" height="100"></img>
+    <h2>专业分类检索</h2>
+    <p>根据你的兴趣爱好、学科特长、以及其他偏好查找适合你的专业</p>
+  </div>
+  <div class="column" style="background-color:#ccc;">
+  <img src="works.png" width="120" height="100"></img>
+    <h2>职业发展</h2>
+    <p>针对你的情况量身定制，推荐适合的职业以及相应的专业</p>
+	<a href="form.html">点此进入</a>
+  </div>
+</div>
 
-<p><b>注意:</b> overflow:hidden 添加到 ul 元素,以防止 li 元素列表的外出。.</p>
+
+
 
 </body>
 </html>
