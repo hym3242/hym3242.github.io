@@ -40,12 +40,30 @@ li a:hover:not(.active) {
 
 /* Create three equal columns that floats next to each other */
 .column {
+  border:1px solid red;
+  border-radius:15px;
   float: left;
-  width: 33.33%;
-  padding: 10px;
-  height: 500px;/* Should be removed. Only for demonstration */
+  width: 22vw;
+  padding: 30px;
+  min-height: 500px;
+  margin:20px;
+  box-shadow:
+  0 2.3px 3px rgba(0, 0, 0, 0.015),
+  0 5.3px 7.1px rgba(0, 0, 0, 0.022),
+  0 9.6px 12.7px rgba(0, 0, 0, 0.028),
+  0 15.9px 21px rgba(0, 0, 0, 0.032),
+  0 26.2px 34.7px rgba(0, 0, 0, 0.038),
+  0 45.8px 60.6px rgba(0, 0, 0, 0.045),
+  0 99px 131px rgba(0, 0, 0, 0.06)
+  /*height: 500px;/* Should be removed. Only for demonstration */
 }
 
+.row{
+  border:1px solid red;
+  display:inline-block;
+  margin-left:12vw;
+  margin-top:7vh;
+}
 /* Clear floats after the columns */
 .row:after {
   content: "";
@@ -71,26 +89,23 @@ li a:hover:not(.active) {
 <!-- -->
 
 <div class="row">
-  <div class="column" style="background-color:#aaa;">
+  <div class="column" style="background-color:#dcecff;">
     <img src="kcb.jpg" width="130" height="100"></img>
 	<a href="kcb.html"><h2>课程表</h2></a>
     <p>你还在为蹭课不知道这堂课的课程表而发愁吗？上传你的课程表，即可访问所有人分享的课程表！一起快乐蹭课吧！</p>
   </div>
-  <div class="column" style="background-color:#bbb;">
+  <div class="column" style="background-color:#dcecff;">
     <img src="magnifier.png" width="100" height="100"></img>
     <a href="search.html"><h2>专业分类检索</h2></a>
     <p>根据你的兴趣爱好、学科特长、以及其他偏好查找适合你的专业</p>
   </div>
-  <div class="column" style="background-color:#ccc;">
+  <div class="column" style="background-color:#dcecff;">
   <img src="works.png" width="120" height="100"></img>
     <a href="works.html"><h2>职业发展</h2></a>
     <p>针对你的情况量身定制，推荐适合的职业以及相应的专业</p>
 	<a href="form.html">点此进入</a>
   </div>
 </div>
-
-
-
 
 </body>
 </html>
