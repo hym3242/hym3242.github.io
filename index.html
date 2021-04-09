@@ -4,6 +4,12 @@
 <meta charset="utf-8">
 <title>Majoring+</title>
 <style>
+#wa{
+  border:1px solid grey;
+  border-radius: 10px;
+  padding:7px;
+  margin-bottom:15px;
+}
 ul {
     list-style-type: none;
     margin: 0;
@@ -15,7 +21,15 @@ ul {
 li {
     float: left;
 }
+#nd{
+  text-decoration: none;
+}
+#ndb{
+  text-decoration: none;
+  color:black;
+}
 
+li span,
 li a {
     display: block;
     color: white;
@@ -23,6 +37,7 @@ li a {
     padding: 14px 16px;
     text-decoration: none;
 }
+
 
 li a:hover:not(.active) {
     background-color: #111;
@@ -40,12 +55,12 @@ li a:hover:not(.active) {
 
 /* Create three equal columns that floats next to each other */
 .column {
-  border:1px solid red;
+  border:0px solid red;
   border-radius:15px;
   float: left;
   width: 22vw;
   padding: 30px;
-  min-height: 500px;
+  min-height: 550px;/*500px*/
   margin:20px;
   box-shadow:
   0 2.3px 3px rgba(0, 0, 0, 0.015),
@@ -59,7 +74,7 @@ li a:hover:not(.active) {
 }
 
 .row{
-  border:1px solid red;
+  border:0px solid red;
   display:inline-block;
   margin-left:12vw;
   margin-top:7vh;
@@ -84,6 +99,7 @@ li a:hover:not(.active) {
   <li><a href="about.html">关于</a></li>
   <li style="float:right"><a href="login.html">登录</a></li>
   <li style="float:right"><a href="signup.html">注册</a></li>
+  <li style="float:right"><span id="xh">欢迎</span></li>
 </ul>
 
 <!-- -->
@@ -91,21 +107,54 @@ li a:hover:not(.active) {
 <div class="row">
   <div class="column" style="background-color:#dcecff;">
     <img src="kcb.jpg" width="130" height="100"></img>
-	<a href="kcb.html"><h2>课程表</h2></a>
+	<a href="kcb.html" id="ndb"><h2>课程表</h2></a>
     <p>你还在为蹭课不知道这堂课的课程表而发愁吗？上传你的课程表，即可访问所有人分享的课程表！一起快乐蹭课吧！</p>
   </div>
   <div class="column" style="background-color:#dcecff;">
     <img src="magnifier.png" width="100" height="100"></img>
-    <a href="search.html"><h2>专业分类检索</h2></a>
+    <a href="search.html" id="ndb"><h2>专业分类检索</h2></a>
     <p>根据你的兴趣爱好、学科特长、以及其他偏好查找适合你的专业</p>
+    <div id="wa">
+      <a id="nd" href="https://mp.weixin.qq.com/s/4PwsNoW4TjF0OrBPTLoYBA">
+        专业介绍与评价（一）by Majoring大学信息交互
+      </a>
+    </div>
+    <div id="wa">
+        <a id="nd" href="https://mp.weixin.qq.com/s/CkcwklxW2-dhZ4lWw9SJ6g">
+          专业介绍与评价（二）by Majoring大学信息交互
+        </a>
+    </div>
+    <div id="wa">
+        <a id="nd" href="https://mp.weixin.qq.com/s/g56dNDlu1dhyWX3irCkzWQ">
+          各专业特殊要求汇总（上）
+        </a>
+    </div>
+    <div id="wa">
+        <a id="nd" href="https://mp.weixin.qq.com/s/2mhQh7uLRCpixvegenDYUg">
+          各专业特殊要求汇总（下）
+        </a>
+    </div>
   </div>
   <div class="column" style="background-color:#dcecff;">
   <img src="works.png" width="120" height="100"></img>
-    <a href="works.html"><h2>职业发展</h2></a>
+    <a href="form.html" id="ndb"><h2>职业发展</h2></a>
     <p>针对你的情况量身定制，推荐适合的职业以及相应的专业</p>
-	<a href="form.html">点此进入</a>
+	<div id="wa">
+    <a href="form.html" id="nd">点此进入职业测试</a>
+  </div>
   </div>
 </div>
 
 </body>
+<script>
+  function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(";").shift();
+  }
+  var xh=getCookie("xh")||" ";
+  document.getElementById("xh").innerHTML = "欢迎 "+xh;
+  
+  console.log(document.cookie);
+</script>
 </html>
