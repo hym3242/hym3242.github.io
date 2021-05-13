@@ -1,4 +1,5 @@
 <title>讨论区 - Majoring+</title>
+<link rel="stylesheet" href="buttons.css" />
 <style>
   #nd {
     text-decoration: none;
@@ -27,9 +28,12 @@
 
 <div id="main">
   <h1>评论区</h1>
-  <a id="nd" href="https://github.com/hym3242/hym3242.github.io/issues/1">
+  <!--<a id="nd" href="https://github.com/hym3242/hym3242.github.io/issues/1">
     添加评论
-  </a>
+  </a>-->
+  <label for="comment">输入评论： </label>
+  <input type="text" id="comment" name="comment" />
+  <button class="small blue button" onclick="tfaddcomment()">添加评论</button>
 </div>
 
 <script>
@@ -66,6 +70,19 @@
       console.error(error);
     });
 
+  function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(";").shift();
+  }
+
+  function tfaddcomment() {
+    var cvalue = document.getElementById("comment").value;
+    if (cvalue != "") {
+      var xh = getCookie("xh") || " ";
+      addcomment(xh, cvalue);
+    }
+  }
   //var tag = document.createElement("a");
   //var text = document.createTextNode(添加评论);
   //tag.appendChild(text);
