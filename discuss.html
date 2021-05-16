@@ -28,9 +28,9 @@
 
 <div id="main">
   <h1>评论区</h1>
-  <!--<a id="nd" href="https://github.com/hym3242/hym3242.github.io/issues/1">
-    添加评论
-  </a>-->
+  <a id="nd" href="https://github.com/hym3242/hym3242.github.io/issues/1">
+    在 GitHub 上添加评论
+  </a>
   <label for="comment">输入评论： </label>
   <input type="text" id="comment" name="comment" />
   <button class="small blue button" onclick="tfaddcomment()">添加评论</button>
@@ -71,17 +71,35 @@
     });
 
   function getCookie(name) {
-    const value = `; ${document.cookie}`;
-    const parts = value.split(`; ${name}=`);
+    const value = `, ${document.cookie}`;
+    const parts = value.split(`, ${name}=`);
     if (parts.length === 2) return parts.pop().split(";").shift();
   }
-
+  //var concat;
+  //document.cookie = "xh=201212345";
+  //console.log("cookie set to " + document.cookie);
+  /* localStorage.setItem("com", "test comment");
+  var comarr = JSON.parse("[" + localStorage.getItem("com") + "]");
+  console.log("comarr = " + comarr);
+  comarr.forEach((e) => console.log(e));
+   */
   function tfaddcomment() {
     var cvalue = document.getElementById("comment").value;
     if (cvalue != "") {
       var xh = getCookie("xh") || " ";
       addcomment(xh, cvalue);
+      //localStorage.setItem("com", localStorage.getItem("com") + "," + cvalue);
+      //console.log("com = " + localStorage.getItem("com"));
+      //var cookie = document.cookie;
+      //concat = cookie + ", c=" + cvalue;
+      //console.log("nowcookie = " + cookie);
+      //console.log("concated = " + concat);
+      //document.cookie = concat;
+      //console.log("Cookie = " + document.cookie);
     }
+
+    //console.log("ready");
+    //console.log("COOKIE = " + document.cookie);
   }
   //var tag = document.createElement("a");
   //var text = document.createTextNode(添加评论);
